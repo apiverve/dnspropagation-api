@@ -1,0 +1,161 @@
+openapi: 3.0.4
+info:
+  title: DNS Propagation Checker
+  description: >-
+    DNS Propagation Checker verifies if DNS changes have propagated across
+    multiple global DNS servers. It queries DNS servers worldwide to show the
+    current state of your DNS records.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.0
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+  - url: https://api.apiverve.com/
+paths:
+  /v1/dnspropagation:
+    get:
+      summary: Check DNS Propagation
+      description: Check DNS propagation for a domain across global DNS servers
+      operationId: dnspropagation
+      parameters:
+        - name: domain
+          in: query
+          schema:
+            type: string
+          required: true
+          description: The domain name to check propagation for
+          example: google.com
+        - name: type
+          in: query
+          schema:
+            type: string
+          required: false
+          description: The DNS record type to check
+          example: A
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: object
+                    description: data
+              example:
+                status: ok
+                error: null
+                data:
+                  domain: google.com
+                  recordType: A
+                  propagationComplete: true
+                  serversChecked: 10
+                  serversResponded: 10
+                  uniqueResponses: 1
+                  results:
+                    - server: Google
+                      location: United States
+                      ip: 8.8.8.8
+                      success: true
+                      records:
+                        - 142.250.80.46
+                      error: null
+                      responseTime: 23
+                    - server: Cloudflare
+                      location: Global
+                      ip: 1.1.1.1
+                      success: true
+                      records:
+                        - 142.250.80.46
+                      error: null
+                      responseTime: 18
+                    - server: OpenDNS
+                      location: United States
+                      ip: 208.67.222.222
+                      success: true
+                      records:
+                        - 142.250.80.46
+                      error: null
+                      responseTime: 31
+                    - server: Quad9
+                      location: Global
+                      ip: 9.9.9.9
+                      success: true
+                      records:
+                        - 142.250.80.46
+                      error: null
+                      responseTime: 25
+                    - server: Comodo
+                      location: United States
+                      ip: 8.26.56.26
+                      success: true
+                      records:
+                        - 142.250.80.46
+                      error: null
+                      responseTime: 42
+                    - server: Level3
+                      location: United States
+                      ip: 4.2.2.1
+                      success: true
+                      records:
+                        - 142.250.80.46
+                      error: null
+                      responseTime: 28
+                    - server: Verisign
+                      location: United States
+                      ip: 64.6.64.6
+                      success: true
+                      records:
+                        - 142.250.80.46
+                      error: null
+                      responseTime: 35
+                    - server: DNS.Watch
+                      location: Germany
+                      ip: 84.200.69.80
+                      success: true
+                      records:
+                        - 142.250.80.46
+                      error: null
+                      responseTime: 89
+                    - server: Yandex
+                      location: Russia
+                      ip: 77.88.8.8
+                      success: true
+                      records:
+                        - 142.250.80.46
+                      error: null
+                      responseTime: 112
+                    - server: Hurricane Electric
+                      location: United States
+                      ip: 74.82.42.42
+                      success: true
+                      records:
+                        - 142.250.80.46
+                      error: null
+                      responseTime: 29
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occurred, try again later
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+  - api_key: []
