@@ -1,0 +1,229 @@
+# DNS Propagation Checker API - Go Client
+
+DNS Propagation Checker verifies if DNS changes have propagated across multiple global DNS servers. It queries DNS servers worldwide to show the current state of your DNS records.
+
+![Build Status](https://img.shields.io/badge/build-passing-green)
+![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
+![Prod Ready](https://img.shields.io/badge/production-ready-blue)
+
+This is a Go client for the [DNS Propagation Checker API](https://apiverve.com/marketplace/dnspropagation?utm_source=go&utm_medium=readme)
+
+---
+
+## Installation
+
+```bash
+go get github.com/apiverve/dnspropagation-api/go
+```
+
+---
+
+## Configuration
+
+Before using the DNS Propagation Checker API client, you need to obtain your API key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=go&utm_medium=readme)
+
+---
+
+## Quick Start
+
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=go&utm_medium=readme)
+
+The DNS Propagation Checker API documentation is found here: [https://docs.apiverve.com/ref/dnspropagation](https://docs.apiverve.com/ref/dnspropagation?utm_source=go&utm_medium=readme)
+
+---
+
+## Usage
+
+```go
+package main
+
+import (
+    "fmt"
+    "log"
+
+    "github.com/apiverve/dnspropagation-api/go"
+)
+
+func main() {
+    // Create a new client
+    client := dnspropagation.NewClient("YOUR_API_KEY")
+
+    // Set up parameters
+    params := map[string]interface{}{
+        "domain": "google.com",
+        "type": "A"
+    }
+
+    // Make the request
+    response, err := client.Execute(params)
+    if err != nil {
+        log.Fatal(err)
+    }
+
+    fmt.Printf("Status: %s\n", response.Status)
+    fmt.Printf("Data: %+v\n", response.Data)
+}
+```
+
+---
+
+## Example Response
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "domain": "google.com",
+    "recordType": "A",
+    "propagationComplete": true,
+    "serversChecked": 10,
+    "serversResponded": 10,
+    "uniqueResponses": 1,
+    "results": [
+      {
+        "server": "Google",
+        "location": "United States",
+        "ip": "8.8.8.8",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 23
+      },
+      {
+        "server": "Cloudflare",
+        "location": "Global",
+        "ip": "1.1.1.1",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 18
+      },
+      {
+        "server": "OpenDNS",
+        "location": "United States",
+        "ip": "208.67.222.222",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 31
+      },
+      {
+        "server": "Quad9",
+        "location": "Global",
+        "ip": "9.9.9.9",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 25
+      },
+      {
+        "server": "Comodo",
+        "location": "United States",
+        "ip": "8.26.56.26",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 42
+      },
+      {
+        "server": "Level3",
+        "location": "United States",
+        "ip": "4.2.2.1",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 28
+      },
+      {
+        "server": "Verisign",
+        "location": "United States",
+        "ip": "64.6.64.6",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 35
+      },
+      {
+        "server": "DNS.Watch",
+        "location": "Germany",
+        "ip": "84.200.69.80",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 89
+      },
+      {
+        "server": "Yandex",
+        "location": "Russia",
+        "ip": "77.88.8.8",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 112
+      },
+      {
+        "server": "Hurricane Electric",
+        "location": "United States",
+        "ip": "74.82.42.42",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 29
+      }
+    ]
+  }
+}
+```
+
+---
+
+## Customer Support
+
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=go&utm_medium=readme).
+
+---
+
+## Updates
+
+Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Twitter.
+
+---
+
+## Legal
+
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=go&utm_medium=readme), [Privacy Policy](https://apiverve.com/privacy?utm_source=go&utm_medium=readme), and [Refund Policy](https://apiverve.com/refund?utm_source=go&utm_medium=readme).
+
+---
+
+## License
+Licensed under the The MIT License (MIT)
+
+Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
