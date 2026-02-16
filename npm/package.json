@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/dnspropagation",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "DNS Propagation Checker verifies if DNS changes have propagated across multiple global DNS servers. It queries DNS servers worldwide to show the current state of your DNS records.",
   "main": "index.js",
   "types": "index.d.ts",
