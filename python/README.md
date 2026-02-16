@@ -44,7 +44,10 @@ from apiverve_dnspropagationchecker.apiClient import DnspropagationAPIClient
 # Initialize the client with your APIVerve API key
 api = DnspropagationAPIClient("[YOUR_API_KEY]")
 
-query = { "domain": "google.com", "type": "A" }
+query = {
+    "domain": "google.com",
+    "type": "A"
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "domain": "google.com", "type": "A" }
+query = {
+    "domain": "google.com",
+    "type": "A"
+}
 ```
 
 ###### Simple Request
@@ -237,7 +243,10 @@ from apiverve_dnspropagationchecker.apiClient import DnspropagationAPIClient, Dn
 
 api = DnspropagationAPIClient("[YOUR_API_KEY]")
 
-query = { "domain": "google.com", "type": "A" }
+query = {
+    "domain": "google.com",
+    "type": "A"
+}
 
 try:
     result = api.execute(query)
@@ -258,7 +267,10 @@ from apiverve_dnspropagationchecker.apiClient import DnspropagationAPIClient, Dn
 
 api = DnspropagationAPIClient("[YOUR_API_KEY]")
 
-query = { "domain": "google.com", "type": "A" }
+query = {
+    "domain": "google.com",
+    "type": "A"
+}
 
 try:
     result = api.execute(query)
@@ -292,7 +304,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_dnspropagationchecker.apiClient import DnspropagationAPIClient, DnspropagationAPIClientError
 
-query = { "domain": "google.com", "type": "A" }
+query = {
+    "domain": "google.com",
+    "type": "A"
+}
 
 # Using context manager ensures proper cleanup
 with DnspropagationAPIClient("[YOUR_API_KEY]") as api:
@@ -318,7 +333,10 @@ from apiverve_dnspropagationchecker.apiClient import DnspropagationAPIClient
 # Enable debug mode
 api = DnspropagationAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "domain": "google.com", "type": "A" }
+query = {
+    "domain": "google.com",
+    "type": "A"
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -333,8 +351,12 @@ from apiverve_dnspropagationchecker.apiClient import DnspropagationAPIClient
 
 api = DnspropagationAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "domain": "google.com",
+    "type": "A"
+}
+
 try:
-    query = { "domain": "google.com", "type": "A" }
     result = api.execute(query)
     print(result)
 finally:
