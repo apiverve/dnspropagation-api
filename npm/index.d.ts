@@ -4,32 +4,44 @@ declare module '@apiverve/dnspropagation' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface dnspropagationResponse {
     status: string;
     error: string | null;
     data: DNSPropagationCheckerData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface DNSPropagationCheckerData {
-      domain:              string;
-      recordType:          string;
-      propagationComplete: boolean;
-      serversChecked:      number;
-      serversResponded:    number;
-      uniqueResponses:     number;
+      domain:              null | string;
+      recordType:          null | string;
+      propagationComplete: boolean | null;
+      serversChecked:      number | null;
+      serversResponded:    number | null;
+      uniqueResponses:     number | null;
       results:             Result[];
   }
   
   interface Result {
-      server:       string;
-      location:     string;
-      ip:           string;
-      success:      boolean;
-      records:      Record[];
+      server:       null | string;
+      location:     null | string;
+      ip:           null | string;
+      success:      boolean | null;
+      records:      (Record | null)[];
       error:        null;
-      responseTime: number;
+      responseTime: number | null;
   }
   
   enum Record {
