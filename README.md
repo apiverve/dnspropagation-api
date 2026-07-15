@@ -1,13 +1,13 @@
-# [DNS Propagation Checker API](https://apiverve.com/marketplace/dnspropagation?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [DNS Propagation Checker API](https://dnspropagation.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
 
 DNS Propagation Checker verifies if DNS changes have propagated across multiple global DNS servers. It queries DNS servers worldwide to show the current state of your DNS records.
 
 The DNS Propagation Checker API provides a simple, reliable way to integrate dns propagation checker functionality into your applications. Built for developers who need production-ready dns propagation checker capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/dnspropagation?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://dnspropagation.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/dnspropagation?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://dnspropagation.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -30,7 +30,12 @@ The DNS Propagation Checker API provides a simple, reliable way to integrate dns
 ```javascript
 async function callDNSPropagationCheckerAPI() {
     try {
-        const response = await fetch('https://api.apiverve.com/v1/dnspropagation', {
+        const params = new URLSearchParams({
+            domain: 'google.com',
+            type: 'A'
+        });
+
+        const response = await fetch(`https://api.apiverve.com/v1/dnspropagation?${params}`, {
             method: 'GET',
             headers: {
                 'x-api-key': 'YOUR_API_KEY_HERE'
@@ -50,7 +55,7 @@ callDNSPropagationCheckerAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/dnspropagation?param=value" \
+curl -X GET "https://api.apiverve.com/v1/dnspropagation?domain=google.com&type=A" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -150,14 +155,14 @@ go get github.com/apiverve/dnspropagation-api/go
 |---------|---------|
 | **Multi-language SDKs** | Native packages for JavaScript, Python, C#, Go, and Android |
 | **Simple Integration** | Single API key authentication, consistent response format |
-| **Production Ready** | 99.9% uptime, fast response times, used by thousands of developers |
+| **Production Ready** | 99.9% uptime SLA, served from 24 global regions |
 | **Comprehensive Docs** | Full examples, OpenAPI spec, and dedicated support |
 
 ---
 
 ## Documentation
 
-- 🏠 **API Home:** [DNS Propagation Checker API](https://apiverve.com/marketplace/dnspropagation?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [DNS Propagation Checker API](https://dnspropagation.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/dnspropagation](https://docs.apiverve.com/ref/dnspropagation)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -169,7 +174,7 @@ go get github.com/apiverve/dnspropagation-api/go
 The DNS Propagation Checker API is commonly used for:
 
 - **Web Applications** - Add dns propagation checker features to your frontend or backend
-- **Mobile Apps** - Native SDKs for iOS and Android development
+- **Mobile Apps** - Native SDKs for Android development
 - **Automation** - Integrate with n8n, Zapier, or custom workflows
 - **SaaS Products** - Enhance your product with dns propagation checker capabilities
 - **Data Pipelines** - Process and analyze data at scale
@@ -199,7 +204,7 @@ All responses are JSON with this structure:
 
 ## Support & Community
 
-- 🏠 **API Home**: [DNS Propagation Checker API](https://apiverve.com/marketplace/dnspropagation?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [DNS Propagation Checker API](https://dnspropagation.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
