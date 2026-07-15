@@ -7,7 +7,7 @@ DNS Propagation Checker verifies if DNS changes have propagated across multiple 
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 [![npm version](https://img.shields.io/npm/v/@apiverve/dnspropagation.svg)](https://www.npmjs.com/package/@apiverve/dnspropagation)
 
-This is a Javascript Wrapper for the [DNS Propagation Checker API](https://apiverve.com/marketplace/dnspropagation?utm_source=npm&utm_medium=readme)
+This is a Javascript Wrapper for the [DNS Propagation Checker API](https://dnspropagation.apiverve.com?utm_source=npm&utm_medium=readme)
 
 ---
 
