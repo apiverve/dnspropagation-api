@@ -192,11 +192,145 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the DNS Propagation Checker API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "domain": "google.com",
+    "recordType": "A",
+    "propagationComplete": true,
+    "serversChecked": 10,
+    "serversResponded": 10,
+    "uniqueResponses": 1,
+    "results": [
+      {
+        "server": "Google",
+        "location": "United States",
+        "ip": "8.8.8.8",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 23
+      },
+      {
+        "server": "Cloudflare",
+        "location": "Global",
+        "ip": "1.1.1.1",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 18
+      },
+      {
+        "server": "OpenDNS",
+        "location": "United States",
+        "ip": "208.67.222.222",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 31
+      },
+      {
+        "server": "Quad9",
+        "location": "Global",
+        "ip": "9.9.9.9",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 25
+      },
+      {
+        "server": "Comodo",
+        "location": "United States",
+        "ip": "8.26.56.26",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 42
+      },
+      {
+        "server": "Level3",
+        "location": "United States",
+        "ip": "4.2.2.1",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 28
+      },
+      {
+        "server": "Verisign",
+        "location": "United States",
+        "ip": "64.6.64.6",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 35
+      },
+      {
+        "server": "DNS.Watch",
+        "location": "Germany",
+        "ip": "84.200.69.80",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 89
+      },
+      {
+        "server": "Yandex",
+        "location": "Russia",
+        "ip": "77.88.8.8",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 112
+      },
+      {
+        "server": "Hurricane Electric",
+        "location": "United States",
+        "ip": "74.82.42.42",
+        "success": true,
+        "records": [
+          "142.250.80.46"
+        ],
+        "error": null,
+        "responseTime": 29
+      }
+    ]
+  }
 }
 ```
 
