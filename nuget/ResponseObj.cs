@@ -25,6 +25,9 @@ namespace APIVerve.API.DNSPropagationChecker
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -36,16 +39,16 @@ namespace APIVerve.API.DNSPropagationChecker
         public string RecordType { get; set; }
 
         [JsonProperty("propagationComplete")]
-        public bool PropagationComplete { get; set; }
+        public bool? PropagationComplete { get; set; }
 
         [JsonProperty("serversChecked")]
-        public long ServersChecked { get; set; }
+        public long? ServersChecked { get; set; }
 
         [JsonProperty("serversResponded")]
-        public long ServersResponded { get; set; }
+        public long? ServersResponded { get; set; }
 
         [JsonProperty("uniqueResponses")]
-        public long UniqueResponses { get; set; }
+        public long? UniqueResponses { get; set; }
 
         [JsonProperty("results")]
         public Result[] Results { get; set; }
@@ -63,16 +66,28 @@ namespace APIVerve.API.DNSPropagationChecker
         public string Ip { get; set; }
 
         [JsonProperty("success")]
-        public bool Success { get; set; }
+        public bool? Success { get; set; }
 
         [JsonProperty("records")]
-        public Record[] Records { get; set; }
+        public Record?[] Records { get; set; }
 
         [JsonProperty("error")]
         public object Error { get; set; }
 
         [JsonProperty("responseTime")]
-        public long ResponseTime { get; set; }
+        public long? ResponseTime { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 
     public enum Record { The1422508046 };
