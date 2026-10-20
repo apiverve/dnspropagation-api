@@ -1,13 +1,12 @@
 DNS Propagation Checker API
 ============
 
-DNS Propagation Checker verifies if DNS changes have propagated across multiple global DNS servers. It queries DNS servers worldwide to show the current state of your DNS records.
+DNS Propagation Checker is a DNS checker API that verifies if DNS changes have propagated across multiple global DNS servers. It queries DNS servers worldwide to show the current state of your DNS records.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [DNS Propagation Checker API](https://apiverve.com/marketplace/dnspropagation?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-dnspropagationchecker.svg)](https://pypi.org/project/apiverve-dnspropagationchecker/)
+
+This is a Python wrapper for the [DNS Propagation Checker API](https://apiverve.com/marketplace/dnspropagation?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-dnspropagationchecker
 
 ## Configuration
 
-Before using the dnspropagation API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the DNS Propagation Checker API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -63,7 +62,7 @@ except Exception as e:
 
 ## Usage
 
-The DNS Propagation Checker API documentation is found here: [https://docs.apiverve.com/ref/dnspropagation](https://docs.apiverve.com/ref/dnspropagation?utm_source=pypi&utm_medium=readme).
+The DNS Propagation Checker API documentation is found here: [https://docs.apiverve.com/ref/dnspropagation](https://docs.apiverve.com/ref/dnspropagation?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -160,9 +159,9 @@ print(result)
         "responseTime": 25
       },
       {
-        "server": "Comodo",
-        "location": "United States",
-        "ip": "8.26.56.26",
+        "server": "Control D",
+        "location": "Global",
+        "ip": "76.76.2.0",
         "success": true,
         "records": [
           "142.250.80.46"
@@ -193,9 +192,9 @@ print(result)
         "responseTime": 35
       },
       {
-        "server": "DNS.Watch",
-        "location": "Germany",
-        "ip": "84.200.69.80",
+        "server": "DNS4EU",
+        "location": "Europe",
+        "ip": "86.54.11.100",
         "success": true,
         "records": [
           "142.250.80.46"
@@ -368,7 +367,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -379,12 +378,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
