@@ -1,13 +1,12 @@
-DNSPropagationChecker API
+DNS Propagation Checker API
 ============
 
-DNS Propagation Checker verifies if DNS changes have propagated across multiple global DNS servers. It queries DNS servers worldwide to show the current state of your DNS records.
+DNS Propagation Checker is a DNS checker API that verifies if DNS changes have propagated across multiple global DNS servers. It queries DNS servers worldwide to show the current state of your DNS records.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a .NET Wrapper for the [DNSPropagationChecker API](https://dnspropagation.apiverve.com?utm_source=nuget&utm_medium=readme)
+[![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.DNSPropagationChecker.svg)](https://www.nuget.org/packages/APIVerve.API.DNSPropagationChecker)
+
+This is a .NET wrapper for the [DNS Propagation Checker API](https://apiverve.com/marketplace/dnspropagation?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -40,8 +39,8 @@ From within Visual Studio:
 
 ## Configuration
 
-Before using the dnspropagation API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=readme)
+Before using the DNS Propagation Checker API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=nuget&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -61,9 +60,9 @@ class Program
         var apiClient = new DNSPropagationCheckerAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new DNSPropagationCheckerQueryOptions {
-    Domain = "google.com",
-    Type = "A"
-};
+            Domain = "google.com",
+            Type = "A"
+        };
 
         // Make the API call
         try
@@ -93,13 +92,13 @@ class Program
 
 ## Usage
 
-The DNSPropagationChecker API documentation is found here: [https://docs.apiverve.com/ref/dnspropagation](https://docs.apiverve.com/ref/dnspropagation?utm_source=nuget&utm_medium=readme).
+The DNS Propagation Checker API documentation is found here: [https://docs.apiverve.com/ref/dnspropagation](https://docs.apiverve.com/ref/dnspropagation?utm_source=nuget&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
 
 ###### Authentication
-DNSPropagationChecker API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
+DNS Propagation Checker API uses API Key-based authentication. When you create an instance of the API client, you can pass your API Key as a parameter.
 
 ```csharp
 // Create an instance of the API client
@@ -126,9 +125,9 @@ public class Example
         var apiClient = new DNSPropagationCheckerAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new DNSPropagationCheckerQueryOptions {
-    Domain = "google.com",
-    Type = "A"
-};
+            Domain = "google.com",
+            Type = "A"
+        };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
 
@@ -159,9 +158,9 @@ public class Example
         var apiClient = new DNSPropagationCheckerAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new DNSPropagationCheckerQueryOptions {
-    Domain = "google.com",
-    Type = "A"
-};
+            Domain = "google.com",
+            Type = "A"
+        };
 
         var response = apiClient.Execute(queryOptions);
 
@@ -197,9 +196,9 @@ public class Example
         var apiClient = new DNSPropagationCheckerAPIClient("[YOUR_API_KEY]");
 
         var queryOptions = new DNSPropagationCheckerQueryOptions {
-    Domain = "google.com",
-    Type = "A"
-};
+            Domain = "google.com",
+            Type = "A"
+        };
 
         try
         {
@@ -254,9 +253,9 @@ public class Example
         apiClient.SetRetryDelay(2000);     // Wait 2 seconds between retries
 
         var queryOptions = new DNSPropagationCheckerQueryOptions {
-    Domain = "google.com",
-    Type = "A"
-};
+            Domain = "google.com",
+            Type = "A"
+        };
 
         try
         {
@@ -428,9 +427,9 @@ using (var apiClient = new DNSPropagationCheckerAPIClient("[YOUR_API_KEY]"))
         "responseTime": 25
       },
       {
-        "server": "Comodo",
-        "location": "United States",
-        "ip": "8.26.56.26",
+        "server": "Control D",
+        "location": "Global",
+        "ip": "76.76.2.0",
         "success": true,
         "records": [
           "142.250.80.46"
@@ -461,9 +460,9 @@ using (var apiClient = new DNSPropagationCheckerAPIClient("[YOUR_API_KEY]"))
         "responseTime": 35
       },
       {
-        "server": "DNS.Watch",
-        "location": "Germany",
-        "ip": "84.200.69.80",
+        "server": "DNS4EU",
+        "location": "Europe",
+        "ip": "86.54.11.100",
         "success": true,
         "records": [
           "142.250.80.46"
@@ -502,7 +501,7 @@ using (var apiClient = new DNSPropagationCheckerAPIClient("[YOUR_API_KEY]"))
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=nuget&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -513,12 +512,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=nuget&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
