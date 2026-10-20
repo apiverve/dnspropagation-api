@@ -1,13 +1,13 @@
-# [DNS Propagation Checker API](https://dnspropagation.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [DNS Propagation Checker API](https://apiverve.com/marketplace/dnspropagation?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-DNS Propagation Checker verifies if DNS changes have propagated across multiple global DNS servers. It queries DNS servers worldwide to show the current state of your DNS records.
+DNS Propagation Checker is a DNS checker API that verifies if DNS changes have propagated across multiple global DNS servers. It queries DNS servers worldwide to show the current state of your DNS records.
 
 The DNS Propagation Checker API provides a simple, reliable way to integrate dns propagation checker functionality into your applications. Built for developers who need production-ready dns propagation checker capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://dnspropagation.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/dnspropagation?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://dnspropagation.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/dnspropagation?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -162,7 +162,7 @@ go get github.com/apiverve/dnspropagation-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [DNS Propagation Checker API](https://dnspropagation.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [DNS Propagation Checker API](https://apiverve.com/marketplace/dnspropagation?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/dnspropagation](https://docs.apiverve.com/ref/dnspropagation)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -264,9 +264,9 @@ A real response from the DNS Propagation Checker API:
         "responseTime": 25
       },
       {
-        "server": "Comodo",
-        "location": "United States",
-        "ip": "8.26.56.26",
+        "server": "Control D",
+        "location": "Global",
+        "ip": "76.76.2.0",
         "success": true,
         "records": [
           "142.250.80.46"
@@ -297,9 +297,9 @@ A real response from the DNS Propagation Checker API:
         "responseTime": 35
       },
       {
-        "server": "DNS.Watch",
-        "location": "Germany",
-        "ip": "84.200.69.80",
+        "server": "DNS4EU",
+        "location": "Europe",
+        "ip": "86.54.11.100",
         "success": true,
         "records": [
           "142.250.80.46"
@@ -338,7 +338,7 @@ A real response from the DNS Propagation Checker API:
 
 ## Support & Community
 
-- 🏠 **API Home**: [DNS Propagation Checker API](https://dnspropagation.apiverve.com?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [DNS Propagation Checker API](https://apiverve.com/marketplace/dnspropagation?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)

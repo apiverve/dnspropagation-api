@@ -2,9 +2,9 @@ openapi: 3.0.4
 info:
   title: DNS Propagation Checker
   description: >-
-    DNS Propagation Checker verifies if DNS changes have propagated across
-    multiple global DNS servers. It queries DNS servers worldwide to show the
-    current state of your DNS records.
+    DNS Propagation Checker is a DNS checker API that verifies if DNS changes
+    have propagated across multiple global DNS servers. It queries DNS servers
+    worldwide to show the current state of your DNS records.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -19,7 +19,7 @@ servers:
 paths:
   /v1/dnspropagation:
     get:
-      summary: Check DNS Propagation
+      summary: DNS Propagation Checker
       description: Check DNS propagation for a domain across global DNS servers
       operationId: dnspropagation
       parameters:
@@ -97,9 +97,9 @@ paths:
                         - 142.250.80.46
                       error: null
                       responseTime: 25
-                    - server: Comodo
-                      location: United States
-                      ip: 8.26.56.26
+                    - server: Control D
+                      location: Global
+                      ip: 76.76.2.0
                       success: true
                       records:
                         - 142.250.80.46
@@ -121,9 +121,9 @@ paths:
                         - 142.250.80.46
                       error: null
                       responseTime: 35
-                    - server: DNS.Watch
-                      location: Germany
-                      ip: 84.200.69.80
+                    - server: DNS4EU
+                      location: Europe
+                      ip: 86.54.11.100
                       success: true
                       records:
                         - 142.250.80.46
