@@ -1,7 +1,7 @@
 {
     "name": "apiverve/dnspropagation",
-    "description": "DNS Propagation Checker verifies if DNS changes have propagated across multiple global DNS servers. It queries DNS servers worldwide to show the current state of your DNS records.",
-    "version": "1.2.0",
+    "description": "DNS Propagation Checker is a DNS checker API that verifies if DNS changes have propagated across multiple global DNS servers. It queries DNS servers worldwide to show the current state of your DNS records.",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -15,13 +15,13 @@
         "api",
         "apiverve",
         "dnspropagation",
-        "dns propagation",
-        "dns propagation checker",
+        "dns propagation checker api",
         "dns propagation api",
-        "dns checker",
-        "global dns"
+        "dns checker api",
+        "dns propagation checker",
+        "check dns propagation"
     ],
-    "homepage": "https://dnspropagation.apiverve.com?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/dnspropagation?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/dnspropagation",

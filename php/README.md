@@ -1,6 +1,6 @@
 # DNS Propagation Checker API - PHP Package
 
-DNS Propagation Checker verifies if DNS changes have propagated across multiple global DNS servers. It queries DNS servers worldwide to show the current state of your DNS records.
+DNS Propagation Checker is a DNS checker API that verifies if DNS changes have propagated across multiple global DNS servers. It queries DNS servers worldwide to show the current state of your DNS records.
 
 ## Installation
 
@@ -124,9 +124,9 @@ $client = new Client(
         "responseTime": 25
       },
       {
-        "server": "Comodo",
-        "location": "United States",
-        "ip": "8.26.56.26",
+        "server": "Control D",
+        "location": "Global",
+        "ip": "76.76.2.0",
         "success": true,
         "records": [
           "142.250.80.46"
@@ -157,9 +157,9 @@ $client = new Client(
         "responseTime": 35
       },
       {
-        "server": "DNS.Watch",
-        "location": "Germany",
-        "ip": "84.200.69.80",
+        "server": "DNS4EU",
+        "location": "Europe",
+        "ip": "86.54.11.100",
         "success": true,
         "records": [
           "142.250.80.46"
@@ -201,11 +201,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/dnspropagation?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/dnspropagation?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://dnspropagation.apiverve.com?utm_source=php&utm_medium=readme](https://dnspropagation.apiverve.com?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/dnspropagation?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/dnspropagation?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
