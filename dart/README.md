@@ -1,11 +1,11 @@
 # DNS Propagation Checker API - Dart/Flutter Client
 
-DNS Propagation Checker verifies if DNS changes have propagated across multiple global DNS servers. It queries DNS servers worldwide to show the current state of your DNS records.
+DNS Propagation Checker is a DNS checker API that verifies if DNS changes have propagated across multiple global DNS servers. It queries DNS servers worldwide to show the current state of your DNS records.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_dnspropagation.svg)](https://pub.dev/packages/apiverve_dnspropagation)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [DNS Propagation Checker API](https://apiverve.com/marketplace/dnspropagation?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [DNS Propagation Checker API](https://apiverve.com/marketplace/dnspropagation?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_dnspropagation: ^1.1.14
+  apiverve_dnspropagation: ^1.2.4
 ```
 
 Then run:
@@ -105,9 +105,9 @@ void main() async {
         "responseTime": 25
       },
       {
-        "server": "Comodo",
-        "location": "United States",
-        "ip": "8.26.56.26",
+        "server": "Control D",
+        "location": "Global",
+        "ip": "76.76.2.0",
         "success": true,
         "records": [
           "142.250.80.46"
@@ -138,9 +138,9 @@ void main() async {
         "responseTime": 35
       },
       {
-        "server": "DNS.Watch",
-        "location": "Germany",
-        "ip": "84.200.69.80",
+        "server": "DNS4EU",
+        "location": "Europe",
+        "ip": "86.54.11.100",
         "success": true,
         "records": [
           "142.250.80.46"
@@ -177,12 +177,12 @@ void main() async {
 
 ## API Reference
 
-- **API Home:** [DNS Propagation Checker API](https://apiverve.com/marketplace/dnspropagation?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/dnspropagation](https://docs.apiverve.com/ref/dnspropagation?utm_source=dart&utm_medium=readme)
+- **API Home:** [DNS Propagation Checker API](https://apiverve.com/marketplace/dnspropagation?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/dnspropagation](https://docs.apiverve.com/ref/dnspropagation?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -190,4 +190,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)

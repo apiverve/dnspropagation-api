@@ -46,7 +46,7 @@ final _formatPatterns = {
 
 /// DNS Propagation Checker API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/dnspropagation?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/dnspropagation?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [domain] (required) - The domain name to check propagation for [format: domain]
